@@ -11,13 +11,27 @@
 |
 */
 
+
 Route::get('/', 'HealthController@index');
-Route::get('/glucose','HealthController@glucose');
-Route::get('/meds','HealthController@meds');
+Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/menu','HealthController@menu');
+ 
+
+Route::get('/glucose',function() {
+    $sugars = DB::table('health')->get();
+    //return $meds;
+    return view('layouts.glucose',compact('sugars'));
+    });
+
+
+Route::get('/meds',function() {
+    $meds = DB::table('med_data')->get();
+    //return $meds;
+    return view('layouts.meds',compact('meds'));
+    }
+
+);
 Route::get('/contacts','HealthController@contacts');
 
 Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
 

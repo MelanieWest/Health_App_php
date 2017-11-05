@@ -38,6 +38,14 @@
 
 <div class="row column">
   <a class="button hollow expanded">Load More</a>
+  <ul>
+      @foreach ($meds as $med)
+    
+        <li><h1>{{$med->med_name}}</h1></li>
+
+      @endforeach
+    </ul>
+
 </div>
 
 @endsection

@@ -3,7 +3,10 @@
 @section('content')
 
 <div class="medium-7 large-6 columns">
-    <h1>Select an Action</h1>
+
+
+
+    <h3>Select an Action</h3>
  
     <button class="button"><a href="/glucose">Glucose</a></button>
     <button class="button"><a href="/meds">Meds</a></button>

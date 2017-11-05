@@ -17,9 +17,11 @@ class HealthController extends Controller
     public function meds(){
         return view('layouts.meds');
     }
-    public function menu(){
+
+    public function menu(){ 
         return view('layouts.menu');
     }
+
     public function contacts(){
         return view('layouts.contacts');
     }
