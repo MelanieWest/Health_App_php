@@ -11,7 +11,7 @@
     </div>
 
   <div class="show-for-large large-3 columns">
-    <img src="http://placehold.it/400x370&text=PSR1257 + 12 C" alt="picture of space">
+    <img src="http://www.leeschools.net/_cache/files/8/0/806ec81d-205b-4536-a5af-ea21e1b43d29/8F36B42A0DDEDA184D6E5458FC919653.beano-myplate.png" alt="healthy meal">
   </div>
 
 
