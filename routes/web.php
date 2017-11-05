@@ -12,8 +12,11 @@
 */
 
 Route::get('/', 'HealthController@index');
+Route::get('/glucose','HealthController@glucose');
+Route::get('/meds','HealthController@meds');
 
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
