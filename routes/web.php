@@ -16,11 +16,14 @@ Route::get('/', 'HealthController@index');
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/menu','HealthController@menu');
  
+Route::get('/glucose','HealthController@glucose');
 
-Route::get('/glucose',function() {
-    $sugars = DB::table('health')->get();
+Route::get('/graph',function() {
+    $auth_user = Auth::user()->id;
+
+    $sugars = DB::table('health')->where('user_id',$auth_user)->get();
     //return $meds;
-    return view('layouts.glucose',compact('sugars'));
+    return view('layouts.graph',compact('sugars'));
     });
 
 
@@ -31,6 +34,7 @@ Route::get('/meds',function() {
     }
 
 );
+
 Route::get('/contacts','HealthController@contacts');
 
 Auth::routes();

@@ -42,6 +42,7 @@
                     <ul class="nav navbar-nav">
                         &nbsp;
                         <li><a href="/glucose">Glucose</a></li>
+                        <li><a href="/graph">Graph</a></li>
                         <li><a href="/meds">Meds</a></li>
                         <li><a href="/contacts">Contacts</a></li>
                     </ul>
