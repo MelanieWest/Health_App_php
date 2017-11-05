@@ -14,7 +14,8 @@
 Route::get('/', 'HealthController@index');
 Route::get('/glucose','HealthController@glucose');
 Route::get('/meds','HealthController@meds');
-
+Route::get('/menu','HealthController@menu');
+Route::get('/contacts','HealthController@contacts');
 
 Auth::routes();
 

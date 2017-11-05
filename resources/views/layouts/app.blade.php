@@ -16,6 +16,8 @@
 </head>
 <body>
     <div id="app">
+
+
         <nav class="navbar navbar-default navbar-static-top">
             <div class="container">
                 <div class="navbar-header">
@@ -35,6 +37,7 @@
                 </div>
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
+                
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
                         &nbsp;
@@ -68,16 +71,21 @@
                                         </form>
                                     </li>
                                 </ul>
+
                             </li>
                         @endguest
                     </ul>
+
                 </div>
             </div>
         </nav>
 
-        @yield('content')
-    </div>
 
+        @yield('content')
+
+    </div>
+ 
+    
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
 </body>
