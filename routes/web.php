@@ -16,21 +16,32 @@ Route::get('/', 'HealthController@index');
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/menu','HealthController@menu');
  
-Route::get('/glucose','HealthController@glucose');
+Route::get('/glucose/create','HealthController@create');
+Route::post('/glucose','HealthController@store');
 
-Route::get('/graph',function() {
+
+
+Route::get('/glucose/show',function() {
     $auth_user = Auth::user()->id;
 
     $sugars = DB::table('health')->where('user_id',$auth_user)->get();
     //return $meds;
-    return view('layouts.graph',compact('sugars'));
+    return view('layouts.glucose.show',compact('sugars'));
     });
 
 
-Route::get('/meds',function() {
+Route::post('/meds/create',function() {
     $meds = DB::table('med_data')->get();
     //return $meds;
-    return view('layouts.meds',compact('meds'));
+    return view('layouts.meds.create',compact('meds'));
+    }
+
+);
+
+Route::get('/meds/show',function() {
+    $meds = DB::table('med_data')->get();
+    //return $meds;
+    return view('layouts.meds.show',compact('meds'));
     }
 
 );

@@ -8,9 +8,9 @@
 
     <h3>Select an Action</h3>
  
-    <button class="button"><a href="/glucose">Glucose</a></button>
-    <button class="button"><a href="/graph">Graph</a></button>
-    <button class="button"><a href="/meds">Meds</a></button>
+    <button class="button"><a href="/glucose/create">Glucose</a></button>
+    <button class="button"><a href="/glucose/show">Graph</a></button>
+    <button class="button"><a href="/meds/show">Meds</a></button>
     <button class="button"><a href="/contacts">Contact</a></button>
     </div>
 
