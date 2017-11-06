@@ -41,15 +41,15 @@
                 </div>
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
-                
-                    <!-- Left Side Of Navbar -->
+
+                <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
                         &nbsp;
                         <li><a href="/glucose/create">Glucose</a></li>
                         <li><a href="/glucose/show">Graph</a></li>
                         <li><a href="/meds/show">Meds</a></li>
                         <li><a href="/contacts">Contacts</a></li>
-                    </ul>
+                    </ul> 
 
                     <!-- Right Side Of Navbar -->
                     <ul class="nav navbar-nav navbar-right">
@@ -85,8 +85,14 @@
             </div>
         </nav>
 
+        <div class="grid-x grid-padding-x align-center-middle text-center" style="height: 400px;">
 
-        @yield('content')
+            <div class="cell small-4">
+                @yield('content')
+            </div>
+
+        </div>
+
 
     </div>
  
