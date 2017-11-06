@@ -7,10 +7,14 @@
 <br>
 
 
+<div class="container">
+<div class="row">
 
-<div class="row small-up-1 medium-up-2 large-up-3">
+  <div class="col align-self-start">
+   
+  </div>
 
-      <div class="row column">
+  <div class="col align-self-center">
 
 
   <table>
@@ -34,14 +38,17 @@
         </tbody>
       </table>
 
-
+      <button class="button"><a href="/menu">Back</a></button>
 
       </div>
-
-
+      
+      <div class="col align-self-end">
+      
+     </div>
+ 
+   </div>
+ </div>
   
-</div>
-
 
 
 @endsection

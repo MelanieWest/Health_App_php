@@ -41,7 +41,7 @@ Route::get('/glucose/show',function() {
     $auth_user = Auth::user()->id;
 
     $sugars = DB::table('health')->where('user_id',$auth_user)->get();
-    //return $meds;
+
     return view('layouts.glucose.show',compact('sugars'));
     });
 

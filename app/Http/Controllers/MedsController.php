@@ -48,7 +48,7 @@ class MedsController extends Controller
                'user_id' => $auth_user,
                'name' => $request->get('name'),
            ]);
-           return view('layouts.meds.show');
+           return view('layouts.menu');
     
     }
 

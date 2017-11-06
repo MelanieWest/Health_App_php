@@ -43,7 +43,7 @@ class HealthController extends Controller
             'user_id' => $auth_user,
             'glucose' => $request->get('am_glucose'),
         ]);
-        return view('layouts.glucose.show');
+        return view('layouts.menu');
      }  
 
 

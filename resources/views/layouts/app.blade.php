@@ -12,10 +12,7 @@
 
     <!-- Styles -->
     <!-- Compressed CSS -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css" integrity="sha256-itWEYdFWzZPBG78bJOOiQIn06QCgN/F0wMDcC4nOhxY=" crossorigin="anonymous" />
-
-<!-- Compressed JavaScript -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js" integrity="sha256-Nd2xznOkrE9HkrAMi4xWy/hXkQraXioBg9iYsBrcFrs=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
@@ -42,15 +39,7 @@
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
 
-                <!-- Left Side Of Navbar -->
-                    <ul class="nav navbar-nav">
-                        &nbsp;
-                        <li><a href="/glucose/create">Glucose</a></li>
-                        <li><a href="/glucose/show">Graph</a></li>
-                        <li><a href="/meds/show">Meds</a></li>
-                        <li><a href="/contacts">Contacts</a></li>
-                    </ul> 
-
+ 
                     <!-- Right Side Of Navbar -->
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
@@ -85,13 +74,30 @@
             </div>
         </nav>
 
-        <div class="grid-x grid-padding-x align-center-middle text-center" style="height: 400px;">
+        <div class="container">
+        <div class="row justify-content-md-center">
 
-            <div class="cell small-4 large-offset-2">
+            <div class="col col-lg-2">
+               
+            </div>
+
+            <div class="col-md-auto">
                 @yield('content')
             </div>
 
+            <div class="col col-lg-2">
+          
+            </div>
+
         </div>
+        </div>
+
+
+
+
+
+
+ 
 
 
     </div>
@@ -101,3 +107,9 @@
     <script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>
+
+
+
+
+
+

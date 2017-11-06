@@ -3,43 +3,54 @@
 
 @section('content')
 
-<div class="row small-up-1 medium-up-2 large-up-3">
-  <div class="row column">
+<div class="container">
+  <div class="row">
 
-<div class ="col small-4">
-</div>
+    <div class="col align-self-start">
+     
+    </div>
 
-<div class="col small-4">
+    <div class="col align-self-center">
 
-<table class="hover">
-  <thead>
-    <tr>
-      <h4><th width="200">glucose</th></h4>
-    </tr>
-  </thead>
-  <tbody>
+
+    <table>
+        <thead>
+          <tr>
+            <th width="200">glucose</th>
+          </tr>
+        </thead>
+        <tbody>
 
 
       @foreach ($sugars as $sugar)
       
-    <tr>
-      <h5><td>{{$sugar->glucose}}</td></h5>
-    </tr>
-    
+        <tr>
+          <td>{{$sugar->glucose}}</td>
+        </tr>
+        
         @endforeach
 
-    </tbody>
-</table>
-</div>
+      </tbody>
+    </table>
+    <button class="button"><a href="/menu">Back</a></button>
 
-<div class="col small-4">
-</div>
+    </div>
+
+    <div class="col align-self-end">
+     
+    </div>
 
   </div>
 </div>
+ 
+
+
+
 
 @endsection
 
 
 
- 
+
+
+
