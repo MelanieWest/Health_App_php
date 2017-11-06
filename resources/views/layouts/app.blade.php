@@ -87,7 +87,7 @@
 
         <div class="grid-x grid-padding-x align-center-middle text-center" style="height: 400px;">
 
-            <div class="cell small-4">
+            <div class="cell small-4 large-offset-2">
                 @yield('content')
             </div>
 

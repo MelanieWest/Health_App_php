@@ -12,29 +12,39 @@
 
       <div class="row column">
 
+
+  <table>
+  <thead>
+    <tr>
+      <th width="200">Med name</th>
+      <th width="150">remaining doses</th>
+    </tr>
+  </thead>
+
        
-        <ul>
+ 
           @foreach ($meds as $med)
-        
-            <li><h1>{{$med->med_name}}</h1></li>
-
+           <tr>
+            <td>{{$med->med_name}}</td>
+            <td>  doses remaining </td>
+          </tr>
           @endforeach
-        </ul>
+ 
+
+        </tbody>
+      </table>
+
+
 
       </div>
 
 
-    <div class="column">
-      <div class="callout">
-        <p>Pegasi B</p>
-        <p><img src="http://placehold.it/400x370&text=Pegasi B" alt="image of a planet called Pegasi B"></p>
-        <p class="lead">Copernican Revolution caused an uproar</p>
-        <p class="subheader">Find Earth-like planets life outside the Solar System</p>
-      </div>
-    </div>
   
 </div>
 
 
 
 @endsection
+
+
+

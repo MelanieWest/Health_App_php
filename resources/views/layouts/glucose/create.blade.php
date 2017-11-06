@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('.layouts.app')
 
 @section('content')
 
@@ -14,7 +14,7 @@
 
           <div class="small-12 columns">
             <label>date
-              <input type="number" placeholder="morning reading" name="am_glucose">
+              <input type="number" placeholder="" name="am_glucose">
             </label>
             <button type="submit" class="button">Enter</button>
           </div> 

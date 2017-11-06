@@ -1,5 +1,11 @@
 <?php
 
+
+use App\Meds;
+
+use Auth;
+use DB;
+
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -34,7 +40,16 @@ class MedsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+           $auth_user = Auth::user()->id;
+           
+           $meds = new Meds;
+        
+           DB::table('meds')->insert([
+               'user_id' => $auth_user,
+               'name' => $request->get('name'),
+           ]);
+           return view('layouts.meds.show');
+    
     }
 
     /**
