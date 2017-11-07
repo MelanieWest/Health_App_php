@@ -15,44 +15,13 @@
 Route::get('/', 'HealthController@index');
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/menu','HealthController@menu');
- 
+Route::get('/contacts','HealthController@contacts');
 Route::get('/glucose/create','HealthController@newhealth');
+Route::get('/meds/create','MedsController@index');
 
-Route::resource('health','HealthController');
 Route::post('/glucose','HealthController@store');
+Route::resource('health','HealthController');
 
-// Route::post('/glucose',function(Request $request){
-
-//     $auth_user = Auth::user()->id;
-//     dd($am_glucose);
-
-//    // DB::insert()
-
-//             DB::table('health')->save([
-//                 'user_id' => $auth_user,
-//                 'glucose' => $request->get('am_glucose'),
-//             ]);
-
-//     return view('layouts.menu');
-// });
-
-
-Route::get('/glucose/show',function() {
-    $auth_user = Auth::user()->id;
-
-    $sugars = DB::table('health')->where('user_id',$auth_user)->get();
-
-    return view('layouts.glucose.show',compact('sugars'));
-    });
-
-
-Route::post('/meds/create',function() {
-    $meds = DB::table('meds')->get();
-    //return $meds;
-    return view('layouts.meds.create',compact('meds'));
-    }
-
-);
 
 Route::get('/meds/show',function() {
     $auth_user = Auth::user()->id;
@@ -64,7 +33,22 @@ Route::get('/meds/show',function() {
 
 );
 
-Route::get('/contacts','HealthController@contacts');
+
+Route::post('/meds','MedsController@store');
+Route::resource('meds','MedsController');
+
+
+Route::get('/glucose/show',function() {
+    $auth_user = Auth::user()->id;
+
+    $sugars = DB::table('health')->where('user_id',$auth_user)->get();
+
+    return view('layouts.glucose.show',compact('sugars'));
+    });
+
+
+
+
 
 Auth::routes();
 

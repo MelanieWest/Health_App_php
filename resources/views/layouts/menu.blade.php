@@ -12,7 +12,7 @@
       <div class="container col md-offset-2 align-self-center">
 
 
-  <div class="card" style="width: 400px;">
+  <div class="card" style="width: 420px;">
   <img class="card-img-top" src="http://www.leeschools.net/_cache/files/8/0/806ec81d-205b-4536-a5af-ea21e1b43d29/8F36B42A0DDEDA184D6E5458FC919653.beano-myplate.png" alt="Card image cap">
   <div class="card-body">
 
@@ -24,7 +24,7 @@
                     
             <button class="button" style="margin: 10px;"><a href="/glucose/create">Glucose</a></button>
             <button class="button" style="margin: 10px;"><a href="/glucose/show">Data</a></button>
-            <button class="button" style="margin: 10px;"><a href="/meds/show">Meds</a></button>
+            <button class="button" style="margin: 10px;"><a href="/meds/show">Meds List</a></button>
             <button class="button" style="margin: 10px;"><a href="/contacts">Contact</a></button>
 
             <div>

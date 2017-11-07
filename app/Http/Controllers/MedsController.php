@@ -1,14 +1,13 @@
 <?php
 
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
 
 use App\Meds;
 
 use Auth;
 use DB;
-
-namespace App\Http\Controllers;
-
-use Illuminate\Http\Request;
 
 class MedsController extends Controller
 {
@@ -19,7 +18,7 @@ class MedsController extends Controller
      */
     public function index()
     {
-        //
+         return view('layouts.meds.create');
     }
 
     /**
@@ -46,8 +45,10 @@ class MedsController extends Controller
         
            DB::table('meds')->insert([
                'user_id' => $auth_user,
-               'name' => $request->get('name'),
-           ]);
+               'name' => $request->get('new_med'),
+               'dose' => $request->get('new_dose'),
+               'rem' => $request->get('new_rem'),
+               ]);
            return view('layouts.menu');
     
     }
@@ -60,7 +61,7 @@ class MedsController extends Controller
      */
     public function show($id)
     {
-        //
+
     }
 
     /**
@@ -96,4 +97,7 @@ class MedsController extends Controller
     {
         //
     }
+
+ 
+ 
 }

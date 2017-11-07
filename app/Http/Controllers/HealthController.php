@@ -94,23 +94,15 @@ class HealthController extends Controller
 
 
 // page routing from here on down
+
+    public function newhealth(){
+
+        return view('layouts/glucose/create');
+    }
+
     
     public function index(){
         return view('layouts.index');
-    }
-
-
-    public function glucose(){
-        return view('layouts/glucose/create');
-    }
-
-    public function newhealth(){
-        return view('layouts/glucose/create');
-    }
-
- 
-    public function meds(){
-        return view('layouts/meds/show');
     }
 
     public function menu(){ 
@@ -120,4 +112,5 @@ class HealthController extends Controller
     public function contacts(){
         return view('layouts.contacts');
     }
+
 }

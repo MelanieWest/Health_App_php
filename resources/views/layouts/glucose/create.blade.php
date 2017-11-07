@@ -9,65 +9,59 @@
 
   <div class="card-body">
 
-  <form method="POST" action="/glucose">
-      {{ csrf_field() }}
+
         <div class="col align-self-center">
 
           <div class="small-12 columns col align-self-center">
-            <label><h3>Morning Reading:
-              <input type="number" placeholder=""  name="am_glucose">
-            </h3></label>
-            <div class="row justify-content-md-center">
-             <button type="submit" class="btn btn-primary" {font-size: 20px;}>Enter</button>
 
-            </div>
+          <form method="POST" action="/glucose">
+
+                {{ csrf_field() }}
+                <label><h3>Morning Reading:
+                <input type="number" placeholder=""  name="am_glucose">
+                </h3></label>
+                <div class="row justify-content-md-center">
+                <button type="submit" class="btn btn-primary" {font-size: 20px;}>Enter</button>
+                </div>
+
+            </form>
+
           </div> 
  
         </div>
 
-   </form>
+
 
 
 
       <div>
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
-                        {{ Auth::user()->name }} 
-                    </a>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
+                    {{ Auth::user()->name }} 
+                </a>
 
-                    <ul class="dropdown-menu">
-                        <li>
-                            <a href="{{ route('logout') }}"
-                                onclick="event.preventDefault();
-                                          document.getElementById('logout-form').submit();">
-                                Logout
-                            </a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="{{ route('logout') }}"
+                            onclick="event.preventDefault();
+                                        document.getElementById('logout-form').submit();">
+                            Logout
+                        </a>
 
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                {{ csrf_field() }}
-                            </form>
-                        </li>
-                    </ul>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            {{ csrf_field() }}
+                        </form>
+                    </li>
+                </ul>
 
               </div>
 
+        </div>
 
-  </div>
-
-</div>
-
-
-
-
-
-
-
+        </div>
 
     </div>
   </div>
 
 @endsection
-
-
-
 
 
