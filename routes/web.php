@@ -47,7 +47,7 @@ Route::get('/glucose/show',function() {
 
 
 Route::post('/meds/create',function() {
-    $meds = DB::table('med_data')->get();
+    $meds = DB::table('meds')->get();
     //return $meds;
     return view('layouts.meds.create',compact('meds'));
     }
@@ -55,7 +55,9 @@ Route::post('/meds/create',function() {
 );
 
 Route::get('/meds/show',function() {
-    $meds = DB::table('med_data')->get();
+    $auth_user = Auth::user()->id;
+    
+    $meds = DB::table('meds')->where('user_id',$auth_user)->get();
     //return $meds;
     return view('layouts.meds.show',compact('meds'));
     }

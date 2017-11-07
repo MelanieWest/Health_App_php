@@ -14,30 +14,30 @@
   <table>
   <thead>
     <tr>
-      <th width="200">Contact</th>
-      <th width="150">Phone</th>
+      <th width = "220px"><h3>Contact</h3></th>
+      <th width = "220px"><h3>Phone</h3></th>
     </tr>
         </thead>
   
            <tr>
-            <td> Friend</td>
-            <td> (407)340-6988 </td>
+            <td><h3> Friend</h3></td>
+            <td><h3> (407)-340-6988 </h3></td>
           </tr>
 
           <tr>
-            <td> Doctor </td>
-            <td> (407)221-9696 </td>
+            <td><h3> Doctor </h3></td>
+            <td><h3> (407)-221-9696 </h3></td>
           </tr>
 
           <tr>
-            <td> Pharmacy </td>
-            <td> (321)-851-3214 </td>
+            <td><h3> Pharmacy </h3></td>
+            <td><h3> (321)-851-3214 </h3></td>
           </tr>
  
         </tbody>
       </table>
 
-      <button class="button"><a href="/menu">Back</a></button>
+      <button class="button" style="margin: 20px;"><a href="/menu">Back</a></button>
 
       </div>
       

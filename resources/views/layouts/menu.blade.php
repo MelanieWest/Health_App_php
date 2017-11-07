@@ -13,17 +13,17 @@
 
           <div class="row md-offset-2">
             
-            <h3>Select an Action</h3>
+            <h3>Where to? </h3>
         
-            <button class="button"><a href="/glucose/create">Glucose</a></button>
-            <button class="button"><a href="/glucose/show">Graph</a></button>
-            <button class="button"><a href="/meds/show">Meds</a></button>
-            <button class="button"><a href="/contacts">Contact</a></button>
+            <button class="button" style="margin: 10px;"><a href="/glucose/create">Glucose</a></button>
+            <button class="button" style="margin: 10px;"><a href="/glucose/show">Data</a></button>
+            <button class="button" style="margin: 10px;"><a href="/meds/show">Meds</a></button>
+            <button class="button" style="margin: 10px;"><a href="/contacts">Contact</a></button>
         
           </div>
     
 
-          <div class="row">
+          <div class="row col-grid" style="margin: 20px;">
              
             <img src="http://www.leeschools.net/_cache/files/8/0/806ec81d-205b-4536-a5af-ea21e1b43d29/8F36B42A0DDEDA184D6E5458FC919653.beano-myplate.png" alt="healthy meal">
 

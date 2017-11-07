@@ -13,26 +13,38 @@
     <div class="col align-self-center">
 
 
-    <table>
-        <thead>
-          <tr>
-            <th width="200">glucose</th>
-          </tr>
-        </thead>
-        <tbody>
+      <div class="card border-success mb-3" style="max-width: 20rem;">
+        <div class="card-header bg-transparent border-success">
+          Blood Glucose History
+        </div>
+        <div class="card-body text-success">
+
+              <table>
+              <thead>
+                <tr>
+                  <th width="200">glucose</th>
+                </tr>
+              </thead>
+              <tbody>
 
 
-      @foreach ($sugars as $sugar)
-      
-        <tr>
-          <td>{{$sugar->glucose}}</td>
-        </tr>
-        
-        @endforeach
+              @foreach ($sugars as $sugar)
 
-      </tbody>
-    </table>
-    <button class="button"><a href="/menu">Back</a></button>
+                <tr>
+                  <td>{{$sugar->glucose}}</td>
+                </tr>
+                
+              @endforeach
+
+            </tbody>
+            </table>
+        </div>
+        <div class="card-footer bg-transparent border-success">
+          <button class="button"><a href="/menu">Back</a></button>
+        </div>
+
+      </div>
+
 
     </div>
 
@@ -48,9 +60,6 @@
 
 
 @endsection
-
-
-
 
 
 
