@@ -11,23 +11,54 @@
 
       <div class="container col md-offset-2 align-self-center">
 
-          <div class="row md-offset-2">
-            
-            <h3>Where to? </h3>
-        
+
+  <div class="card" style="width: 400px;">
+  <img class="card-img-top" src="http://www.leeschools.net/_cache/files/8/0/806ec81d-205b-4536-a5af-ea21e1b43d29/8F36B42A0DDEDA184D6E5458FC919653.beano-myplate.png" alt="Card image cap">
+  <div class="card-body">
+
+    <h4 class="card-title"></h4>
+
+    <h3 class="card-text">Where to?</h3>
+ 
+    <div class="row md-offset-2">
+                    
             <button class="button" style="margin: 10px;"><a href="/glucose/create">Glucose</a></button>
             <button class="button" style="margin: 10px;"><a href="/glucose/show">Data</a></button>
             <button class="button" style="margin: 10px;"><a href="/meds/show">Meds</a></button>
             <button class="button" style="margin: 10px;"><a href="/contacts">Contact</a></button>
-        
-          </div>
-    
 
-          <div class="row col-grid" style="margin: 20px;">
-             
-            <img src="http://www.leeschools.net/_cache/files/8/0/806ec81d-205b-4536-a5af-ea21e1b43d29/8F36B42A0DDEDA184D6E5458FC919653.beano-myplate.png" alt="healthy meal">
+            <div>
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
+            {{ Auth::user()->name }} 
+        </a>
 
-          </div>
+        <ul class="dropdown-menu">
+            <li>
+                <a href="{{ route('logout') }}"
+                    onclick="event.preventDefault();
+                                document.getElementById('logout-form').submit();">
+                    Logout
+                </a>
+
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    {{ csrf_field() }}
+                </form>
+            </li>
+        </ul>
+
+    </div>
+
+    </div>
+
+
+  </div>
+</div>
+
+
+ 
+
+
+
 
       </div>
 
@@ -38,8 +69,5 @@
 
 
 @endsection
-
-
-
 
 

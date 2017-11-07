@@ -20,8 +20,16 @@
             <div class="row justify-content-md-center">
              <button type="submit" class="btn btn-primary" {font-size: 20px;}>Enter</button>
 
+            </div>
+          </div> 
+ 
+        </div>
 
-             <div>
+   </form>
+
+
+
+      <div>
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
                         {{ Auth::user()->name }} 
                     </a>
@@ -42,13 +50,6 @@
 
               </div>
 
-
-            </div>
-          </div> 
- 
-        </div>
-
-      </form>
 
   </div>
 
