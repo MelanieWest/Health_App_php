@@ -39,7 +39,7 @@ class HealthController extends Controller
         
         $glucose = new Health;
      
-        DB::table('health')->insert([
+        DB::table('healths')->insert([
             'user_id' => $auth_user,
             'glucose' => $request->get('am_glucose'),
         ]);

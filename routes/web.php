@@ -18,7 +18,7 @@ Route::get('/menu','HealthController@menu');
 Route::get('/contacts','HealthController@contacts');
 Route::get('/glucose/create','HealthController@newhealth');
 Route::get('/meds/create','MedsController@index');
-Route::get('/bar-chart', 'ChartController@index');
+Route::get('/chart', 'ChartController@index');
 
 Route::post('/glucose','HealthController@store');
 Route::resource('health','HealthController');
@@ -42,7 +42,7 @@ Route::resource('meds','MedsController');
 Route::get('/glucose/show',function() {
     $auth_user = Auth::user()->id;
 
-    $sugars = DB::table('health')->where('user_id',$auth_user)->get();
+    $sugars = DB::table('healths')->where('user_id',$auth_user)->get();
 
     return view('layouts.glucose.show',compact('sugars'));
     });
