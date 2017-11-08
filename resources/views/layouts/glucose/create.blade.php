@@ -24,6 +24,8 @@
                 <button type="submit" class="btn btn-primary" {font-size: 20px;}>Enter</button>
                 </div>
 
+                <button style="float: right; margin:10px;"><a href="/menu" >Back</a></button>
+
             </form>
 
           </div> 
@@ -53,7 +55,7 @@
                     </li>
                 </ul>
 
-              </div>
+        </div>
 
         </div>
 
