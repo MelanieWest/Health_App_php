@@ -12,7 +12,7 @@
       <div class="container col md-offset-2 align-self-center">
 
 
-  <div class="card" style="width: 420px;">
+  <div class="card" style="width: 460px;">
   <img class="card-img-top" src="http://www.leeschools.net/_cache/files/8/0/806ec81d-205b-4536-a5af-ea21e1b43d29/8F36B42A0DDEDA184D6E5458FC919653.beano-myplate.png" alt="Card image cap">
   <div class="card-body">
 
@@ -23,10 +23,11 @@
     <div class="row md-offset-2">
                     
             <button class="button" style="margin: 10px;"><a href="/glucose/create">Glucose</a></button>
+            <button class="button" style="margin: 10px;"><a href="/chart">Graph</a></button>
             <button class="button" style="margin: 10px;"><a href="/glucose/show">Data</a></button>
             <button class="button" style="margin: 10px;"><a href="/meds/show">Meds List</a></button>
             <button class="button" style="margin: 10px;"><a href="/contacts">Contact</a></button>
-
+            
             <div>
         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
             {{ Auth::user()->name }} 

@@ -37,16 +37,13 @@
                             </form>
                         </li>
                     </ul>
-
               </div>
-
-
-
-
         </div>
         <div class="card-body text-success">
 
-              <table>
+
+
+            <table>
               <thead>
                 <tr>
                   <th width="200">glucose</th>
@@ -65,13 +62,16 @@
 
             </tbody>
             </table>
+
+
         </div>
+
+
         <div class="card-footer bg-transparent border-success">
           <button class="button"><a href="/menu">Back</a></button>
         </div>
 
       </div>
-
 
     </div>
 
