@@ -38,22 +38,35 @@
                 <table>
                     <thead>
                         <tr>
-                        <th width="200"><h3>Med name</h3></th>
-                        <th width="150"><h3>remaining</h3></th>
+                        <th width="280"><h3>Med name</h3></th>
+                        <th width="200"><h3>doses left</h3></th>
                         </tr>
                     </thead>
 
                     <tbody>
 
                     @foreach ($meds as $med)
-                    <tr id={{$med->id}}>
-                        <td><h3>{{$med->name}}</h3></td>
+                    <tr id = ".$med->id.">
                         <td>
+
+                        <form method = "DELETE" action ="/meds/{{$med->id}}">
+                        {{ csrf_field() }}
+                            <h3>{{$med->name}}</h3>
+                            <button type="submit" id=".$med->id.">Remove</button>
+                        </form>
+
+                        </td>
+
+                        <td>
+
+                        <form method = "GET" action ="/meds/{{$med->id}}">
+                        {{ csrf_field() }}
                             <h3>{{$med->rem}}</h3>
-                            <button type="submit">Add</button>
+                            <button type="submit">Update</button>
+                        </form>
+
                         </td>
                     </tr>
-                    <button type="submit" id={{$med->id}}>Remove</button>
                     @endforeach
             
                     </tbody>

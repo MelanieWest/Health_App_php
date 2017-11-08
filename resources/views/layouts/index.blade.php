@@ -5,7 +5,9 @@
 
   <div class="card border-success mb-3" style="max-width: 920px;">
   <div class="card-header bg-transparent border-success">
-    <h4> Welcome to your health management app!  Please login.</h4>
+    <h4>      Welcome to your health management app!  Please login:      
+    <button style="margin: 0px 10px 0px 60px;"><a href="{{ route('login') }}">Login</a></button>
+    <button style="margin: 0px 10px 0px 10px;"><a href="{{ route('register') }}">Register</a></button></h4>
   </div>
   
 
@@ -16,8 +18,7 @@
   </div>
 
   <div class="card-footer bg-transparent border-success">
-    <button><a href="{{ route('login') }}">Login</a></button>
-    <button><a href="{{ route('register') }}">Register</a></button>
+
   </div>
 </div>
 

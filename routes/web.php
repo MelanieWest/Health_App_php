@@ -18,10 +18,10 @@ Route::get('/menu','HealthController@menu');
 Route::get('/contacts','HealthController@contacts');
 Route::get('/glucose/create','HealthController@newhealth');
 Route::get('/meds/create','MedsController@index');
+Route::get('/bar-chart', 'ChartController@index');
 
 Route::post('/glucose','HealthController@store');
 Route::resource('health','HealthController');
-
 
 Route::get('/meds/show',function() {
     $auth_user = Auth::user()->id;
@@ -33,7 +33,8 @@ Route::get('/meds/show',function() {
 
 );
 
-
+Route::get('/meds/id','MedsController@update');
+Route::delete('meds/id','MedsController@destroy');
 Route::post('/meds','MedsController@store');
 Route::resource('meds','MedsController');
 

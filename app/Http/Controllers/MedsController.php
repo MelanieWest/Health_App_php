@@ -84,7 +84,8 @@ class MedsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        dd(request('name'));
+        dd(request()->all());
     }
 
     /**
@@ -95,7 +96,7 @@ class MedsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        dd(request()->all());
     }
 
  
