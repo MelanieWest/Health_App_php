@@ -13,22 +13,7 @@ class ChartController extends Controller
 {
     public function index()
     {
-    // 	$users = User::where(DB::raw("(DATE_FORMAT(created_at,'%Y'))"),date('Y'))
-    //     ->get();
-  
-    //     //dd($users);              
-        
-    //     $chart = Charts::database($users, 'bar', 'highcharts')
-	// 		      ->title("Monthly new Registered Users")
-	// 		      ->elementLabel("Total Users")
-	// 		      ->dimensions(1000, 500)
-	// 		      ->responsive(false)
-    // //    	      ->groupByMonth(date('Y'), true);
-    //               ->groupBy('id');
-
-
-        //$id     = DB::table('healths')->where('user_id',$auth_user)->get();
-        //$sugars = Health::where(('user_id',$auth_user))->get();
+    
 //------------------------------------------------------------------------
         $auth_user = Auth::user()->id;
         

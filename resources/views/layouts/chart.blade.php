@@ -36,7 +36,7 @@
         <h4 class="card-title">Morning Readings</h4>
         <!--Text-->
         <p class="card-text"></p>
-        <button style="float: right;"><a href="/menu" >Back</a></button>
+        <button style="float: right;"><a href="/home" >Back</a></button>
 
 
         <div style="font-size:18px;">
