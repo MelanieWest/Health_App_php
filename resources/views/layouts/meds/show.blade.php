@@ -8,7 +8,7 @@
 
         <div class="card-header bg-transparent border-success">
                <h3> List of Medicines 
-                <button class="button" style="margin: 10px;"><a href="/menu">Back</a></button></h3>
+                <button class="button" style="margin: 10px;"><a href="/home">Back</a></button></h3>
 
             <div>
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">

@@ -18,24 +18,19 @@
 
   </div>
 
-
- 
   <div>
       <ul class="list-group list-group-flush">
         <li class="list-group-item text-center"><h3>Friend:   (407)-340-6899</h3></li>
         <li class="list-group-item text-center"><h3>Doctor:   (407)-221-9696</h3></li>
         <li class="list-group-item text-center"><h3>Pharmacy: (321)-851-3214</h3></li>
       </ul>
-    </div>
-
-
-
+  </div>
 
   <div class="card-block">
 
-    <button class="button" style="margin: 20px; float:right; font-size: 20px;"><a href="/menu">Back</a></button>
+    <button class="button" style="margin: 20px; float:right; font-size: 20px;"><a href="/home">Back</a></button>
 
-    <div>
+    <div style="font-size:18px; padding:20px;">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
               {{ Auth::user()->name }} 
           </a>

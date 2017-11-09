@@ -68,7 +68,7 @@
 
 
         <div class="card-footer bg-transparent border-success">
-          <button class="button"><a href="/menu">Back</a></button>
+          <button class="button"><a href="/home">Back</a></button>
         </div>
 
       </div>

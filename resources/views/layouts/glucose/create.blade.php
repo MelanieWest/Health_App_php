@@ -25,7 +25,7 @@
                     <button type="submit" class="btn btn-primary" style="font-size: 24px;">Enter</button>
                 </div>
 
-                <button style="float: right; margin:10px; font-size:22px;"><a href="/menu" >Back</a></button>
+                <button style="float: right; margin:10px; font-size:22px;"><a href="/home" >Back</a></button>
 
             </form>
 

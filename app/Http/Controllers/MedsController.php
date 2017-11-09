@@ -53,7 +53,7 @@ class MedsController extends Controller
                'dose' => $request->get('new_dose'),
                'rem' => $request->get('new_rem'),
                ]);
-           return view('layouts.menu');
+           return view('/home');
     
     }
 
@@ -98,7 +98,7 @@ class MedsController extends Controller
             
             $med->save();
     
-            return view('layouts.menu');
+            return view('/home');
 
     }
 
@@ -115,7 +115,7 @@ class MedsController extends Controller
 
         $med->delete();
 
-        return view('layouts.menu');
+        return view('/home');
         
     }
 
