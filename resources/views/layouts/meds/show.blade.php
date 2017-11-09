@@ -38,15 +38,15 @@
                 <table>
                     <thead>
                         <tr>
-                        <th width="280"><h3>Med name</h3></th>
-                        <th width="200"><h3>doses left</h3></th>
+                        <th style="width:200px;"><h3>Med name</h3></th>
+                        <th style="padding-left: 40px;"><h3>doses left</h3></th>
                         </tr>
                     </thead>
 
                     <tbody>
 
                     @foreach ($meds as $med)
-                    <tr >
+                    <tr style="width: 500px;">
                         <td>
                         
                         <form method = "POST" action ="/meds/{{$med->id}}/">
@@ -62,15 +62,29 @@
                         <td>
 
                         <form method = "POST" action ="/meds/{{$med->id}}">
-                        {{ csrf_field() }}
-                        {{ method_field('PATCH')}}
-                            <h3>{{$med->rem}}</h3>
-                            <h3><input type="number" style="width: 70px;" placeholder="refill"  name="refill"></h3>
-                            <button type="submit">Add</button>
+
+                            <div class="container">
+                                {{ csrf_field() }}
+                                {{ method_field('PATCH')}}
+
+                                <div class="row">
+                                    <div class="col-sm-1">
+                                        <h3 style="padding-left: 30px;">{{$med->rem}}</h3>
+                                    </div>
+                                    <div class="col-sm-1">
+                                        <h3><input type="number" style="width: 70px;" placeholder="refill"  name="refill"></h3>
+                                    </div>
+                                    <div class="col-sm-1">
+                                        <button type="submit" style="margin-top:25px">Add</button>
+                                    </div>
+                                </div>
+                            </div>
+
                         </form>
 
                         </td>
                     </tr>
+
                     @endforeach
                     </tbody>
                 </table>
