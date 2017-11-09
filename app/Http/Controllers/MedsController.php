@@ -88,8 +88,15 @@ class MedsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        dd(request('name'));
-        dd(request()->all());
+  
+            $med = Meds::find($id);
+
+            $med->rem = 90;
+            
+            $med->save();
+    
+            return view('layouts.menu');
+
     }
 
     /**

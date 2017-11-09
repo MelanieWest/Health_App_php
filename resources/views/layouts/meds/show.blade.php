@@ -61,8 +61,9 @@
 
                         <td>
 
-                        <form method = "GET" action ="/meds/{{$med->id}}">
+                        <form method = "POST" action ="/meds/{{$med->id}}">
                         {{ csrf_field() }}
+                        {{ method_field('PATCH')}}
                             <h3>{{$med->rem}}</h3>
                             <button type="submit">Update</button>
                         </form>

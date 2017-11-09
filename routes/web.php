@@ -28,7 +28,7 @@ Route::resource('health','HealthController');
 
 
 Route::get('/meds/show','MedsController@index');
-Route::get('/meds/{id}','MedsController@update');
+Route::patch('/meds/{id}','MedsController@update');
 Route::delete('/meds/{id}','MedsController@destroy');
 Route::post('/meds','MedsController@store');
 Route::resource('meds','MedsController');
