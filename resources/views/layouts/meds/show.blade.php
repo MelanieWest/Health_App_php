@@ -65,7 +65,8 @@
                         {{ csrf_field() }}
                         {{ method_field('PATCH')}}
                             <h3>{{$med->rem}}</h3>
-                            <button type="submit">Update</button>
+                            <h3><input type="number" style="width: 70px;" placeholder="refill"  name="refill"></h3>
+                            <button type="submit">Add</button>
                         </form>
 
                         </td>

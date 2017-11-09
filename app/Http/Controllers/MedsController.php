@@ -90,8 +90,11 @@ class MedsController extends Controller
     {
   
             $med = Meds::find($id);
+            $refill = $request->get('refill');
+            $rem    = $med->rem;
 
-            $med->rem = 90;
+            $rem = $rem + $refill;
+            $med->rem = $rem;
             
             $med->save();
     
