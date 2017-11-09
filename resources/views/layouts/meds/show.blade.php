@@ -46,14 +46,16 @@
                     <tbody>
 
                     @foreach ($meds as $med)
-                    <tr id = ".$med->id.">
+                    <tr >
                         <td>
-
-                        <form method = "DELETE" action ="/meds/{{$med->id}}/delete">
+                        
+                        <form method = "POST" action ="/meds/{{$med->id}}/">
                         {{ csrf_field() }}
+                        {{ method_field('DELETE') }}
                             <h3>{{$med->name}}</h3>
-                            <button type="submit" id=".$med->id.">Remove</button>
-                        </form>
+                           <button type="submit" id="{{$med->id}}">Remove</button>
+                        </form>        
+
 
                         </td>
 
@@ -68,7 +70,6 @@
                         </td>
                     </tr>
                     @endforeach
-            
                     </tbody>
                 </table>
 

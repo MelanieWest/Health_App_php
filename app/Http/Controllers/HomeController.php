@@ -36,9 +36,4 @@ class HomeController extends Controller
         return view('layouts.menu');
     }
 
-    public function contacts()
-    {
-        return view('layouts.contacts');
-    }
-
 }

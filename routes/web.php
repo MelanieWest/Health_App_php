@@ -15,9 +15,8 @@
 Route::get('/', 'HomeController@index');
 Route::get('/home', 'HomeController@home')->name('home');
 Route::get('/menu','HomeController@menu');
-Route::get('/contacts','HomeController@contacts');
 
-//Route::get('/contacts','HealthController@contacts');
+Route::get('/contacts','ContactController@index');
 
 Route::get('/glucose/create','HealthController@newhealth');
 Route::get('/meds/create','MedsController@index');
@@ -30,7 +29,7 @@ Route::resource('health','HealthController');
 
 Route::get('/meds/show','MedsController@index');
 Route::get('/meds/{id}','MedsController@update');
-Route::delete('/meds/{id}/delete','MedsController@destroy')->name('med.delete');
+Route::delete('/meds/{id}','MedsController@destroy');
 Route::post('/meds','MedsController@store');
 Route::resource('meds','MedsController');
 

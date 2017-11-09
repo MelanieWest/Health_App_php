@@ -4,12 +4,13 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Meds;
+use App\Contact;
 
 use Auth;
 use DB;
 
-class MedsController extends Controller
+
+class ContactController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -20,9 +21,9 @@ class MedsController extends Controller
     {
         $auth_user = Auth::user()->id;
         
-        $meds = DB::table('meds')->where('user_id',$auth_user)->get();
-        //return $meds;
-        return view('layouts.meds.show',compact('meds'));
+    //    $contact = DB::table('contacts')->where('user_id',$auth_user)->get(1);
+        
+        return view('layouts.contacts');
     }
 
     /**
@@ -43,38 +44,27 @@ class MedsController extends Controller
      */
     public function store(Request $request)
     {
-           $auth_user = Auth::user()->id;
-           
-           $meds = new Meds;
-        
-           DB::table('meds')->insert([
-               'user_id' => $auth_user,
-               'name' => $request->get('new_med'),
-               'dose' => $request->get('new_dose'),
-               'rem' => $request->get('new_rem'),
-               ]);
-           return view('layouts.menu');
-    
+        //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Contact  $contact
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Contact $contact)
     {
-
+        //
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Contact  $contact
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Contact $contact)
     {
         //
     }
@@ -83,32 +73,22 @@ class MedsController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Contact  $contact
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Contact $contact)
     {
-        dd(request('name'));
-        dd(request()->all());
+        //
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Contact  $contact
      * @return \Illuminate\Http\Response
      */
-    
-    public function destroy(Request $request, $id)
+    public function destroy(Contact $contact)
     {
-        $med = Meds::find($id);
-
-        $med->delete();
-
-        return view('layouts.menu');
-        
+        //
     }
-
- 
- 
 }
