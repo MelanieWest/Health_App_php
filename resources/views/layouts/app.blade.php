@@ -19,10 +19,10 @@
 
 </head>
 <body>
-    <div id="app">
 
+<div id="app">
 
-        <nav class="navbar navbar-default navbar-static-top">
+ <nav class="navbar navbar-default navbar-static-top">
             <div class="container">
                 <div class="navbar-header">
 
@@ -35,7 +35,7 @@
                     </button>
 
                     <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
+                    <a class="navbar-brand" style="float:left;" href="{{ url('/') }}">
                         Health
                     </a>
                 </div>
@@ -84,28 +84,18 @@
                
             </div>
 
-            <div class="col-md-auto">
-                @yield('content')
-            </div>
+                <div class="col-md-auto">
+                    @yield('content')
+                </div>
 
             <div class="col col-lg-2">
           
             </div>
 
         </div>
-        </div>
-
-
-
-
-
-
- 
-
-
+      </div>
     </div>
- 
-    
+   
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
 </body>

@@ -14,7 +14,7 @@
     <div class="col align-self-center">
 
 
-      <div class="card border-success mb-3" style="max-width: 20rem;">
+      <div class="card border-success mb-3" style="max-width: 500px; font-size:22px">
         <div class="card-header bg-transparent border-success">
           Blood Glucose History
 
@@ -39,7 +39,7 @@
                     </ul>
               </div>
         </div>
-        <div class="card-body text-success">
+        <div class="card-body text-success" >
 
 
 
@@ -82,8 +82,6 @@
   </div>
 </div>
  
-
-
 
 
 @endsection

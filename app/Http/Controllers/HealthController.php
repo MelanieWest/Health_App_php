@@ -15,6 +15,14 @@ class HealthController extends Controller
 
 {
 
+    public function index()
+    {
+        $auth_user = Auth::user()->id;
+        
+        $sugars = DB::table('healths')->where('user_id',$auth_user)->get();
+        
+        return view('layouts.glucose.show',compact('sugars'));
+    }
 
 
     /**
@@ -94,9 +102,6 @@ class HealthController extends Controller
 
 
    
-
-
-
 // page routing from here on down
 
     public function newhealth(){
@@ -104,17 +109,5 @@ class HealthController extends Controller
         return view('layouts/glucose/create');
     }
 
-    
-    public function index(){
-        return view('layouts.index');
-    }
-
-    public function menu(){ 
-        return view('layouts.menu');
-    }
-
-    public function contacts(){
-        return view('layouts.contacts');
-    }
 
 }

@@ -49,7 +49,7 @@
                     <tr id = ".$med->id.">
                         <td>
 
-                        <form method = "DELETE" action ="/meds/{{$med->id}}">
+                        <form method = "DELETE" action ="/meds/{{$med->id}}/delete">
                         {{ csrf_field() }}
                             <h3>{{$med->name}}</h3>
                             <button type="submit" id=".$med->id.">Remove</button>
@@ -97,9 +97,9 @@
 
      </form>
 
-            </div>
-
     </div>
+
+</div>
 
 
 

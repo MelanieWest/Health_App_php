@@ -18,7 +18,11 @@ class MedsController extends Controller
      */
     public function index()
     {
-         return view('layouts.meds.create');
+        $auth_user = Auth::user()->id;
+        
+        $meds = DB::table('meds')->where('user_id',$auth_user)->get();
+        //return $meds;
+        return view('layouts.meds.show',compact('meds'));
     }
 
     /**
@@ -94,9 +98,14 @@ class MedsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+    
     public function destroy($id)
     {
-        dd(request()->all());
+
+        $med = Meds::find($id)->delete();
+
+        return view('layouts.meds.show');
+        
     }
 
  

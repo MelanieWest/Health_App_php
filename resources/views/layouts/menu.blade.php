@@ -12,8 +12,8 @@
       <div class="container col md-offset-2 align-self-center">
 
 
-  <div class="card" style="width: 520px;">
-  <img class="card-img-top" src="http://www.leeschools.net/_cache/files/8/0/806ec81d-205b-4536-a5af-ea21e1b43d29/8F36B42A0DDEDA184D6E5458FC919653.beano-myplate.png" alt="Card image cap">
+  <div class="card" style="width: 580px;">
+  <img class="card-img-top" src="https://rlv.zcache.com/portion_control_melamine_plate-rfa5fb1afeb064f66a6ab9d20281b8ddf_ambb0_8byvr_324.jpg" alt="Card image cap" style="margin:20px; width:520px">
   <div class="card-body">
 
     <h4 class="card-title"></h4>
@@ -22,11 +22,11 @@
  
     <div class="row md-offset-2">
                     
-            <button class="button" style="margin: 10px; font-size:16px;"><a href="/glucose/create">Glucose</a></button>
-            <button class="button" style="margin: 10px; font-size:16px;"><a href="/chart">Graph</a></button>
-            <button class="button" style="margin: 10px; font-size:16px;"><a href="/glucose/show">Data</a></button>
-            <button class="button" style="margin: 10px; font-size:16px;"><a href="/meds/show">Meds List</a></button>
-            <button class="button" style="margin: 10px; font-size:16px;"><a href="/contacts">Contact</a></button>
+            <button class="button" style="margin: 10px; font-size:22px;"><a href="/glucose/create">Glucose</a></button>
+            <button class="button" style="margin: 10px; font-size:22px;"><a href="/chart">Graph</a></button>
+            <button class="button" style="margin: 10px; font-size:22px;"><a href="/glucose/show">Data</a></button>
+            <button class="button" style="margin: 10px; font-size:22px;"><a href="/meds/show">Meds List</a></button>
+            <button class="button" style="margin: 10px; font-size:22px;"><a href="/contacts">Contact</a></button>
             
             <div>
         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">
