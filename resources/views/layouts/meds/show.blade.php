@@ -75,7 +75,7 @@
                                         <h3><input type="number" style="width: 70px;" placeholder="refill"  name="refill"></h3>
                                     </div>
                                     <div class="col-sm-1">
-                                        <button type="submit" style="margin-top:25px">Add</button>
+                                        <button type="submit" style="margin-top:25px">Add doses</button>
                                     </div>
                                 </div>
                             </div>

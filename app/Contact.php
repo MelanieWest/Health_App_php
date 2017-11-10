@@ -6,6 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Contact extends Model
 {
-   protected $fillable = ['friend','doc','pharm'];
+   protected $guarded = ['id'];
     
 }
