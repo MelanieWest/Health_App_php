@@ -24,15 +24,23 @@ class MedsController extends Controller
 
         $meds = DB::table('meds')->where('user_id',$auth_user)->get();
 
-        //  foreach($meds as $med){
+         foreach($meds as $med){
 
-        //         $now = time(); // or your date as well
-        //         $lastUpdate = strtotime($med->updated_at);
-        //         $datediff = $now - $lastUpdate;
+                $now = time(); // or your date as well
+                $lastUpdate = strtotime($med->updated_at);
+                $datediff = $now - $lastUpdate;
+                $days = floor($datediff /(60 * 60 * 24));
+
+                //this is working!! how to send data down...
+                $doses_remaining = ($med->rem)-$days*($med->dose);
+                if($doses_remaining<0){
+                    $doses_remaining = 0;
+                }
+                $med->rem = $doses_remaining;
+
+//              dd ( $now,$lastUpdate, floor($datediff / (60 * 60 * 24)),$med);
                 
-        //         dd ( $now,$lastUpdate, floor($datediff / (60 * 60 * 24)));
-                    //this is working!! how to send data down...
-        //  }
+        }
         
         return view('layouts.meds.show',compact('meds'));
     }
