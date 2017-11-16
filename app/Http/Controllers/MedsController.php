@@ -26,12 +26,17 @@ class MedsController extends Controller
 
          foreach($meds as $med){
 
+                
+//              when doses are added, 'rem' is adjusted for time passed,
+//              and the updated date becomes current.
+
                 $now = time(); // or your date as well
                 $lastUpdate = strtotime($med->updated_at);
                 $datediff = $now - $lastUpdate;
                 $days = floor($datediff /(60 * 60 * 24));
 
-                //this is working!! how to send data down...
+                //$days is the number of days since last refill
+
                 $doses_remaining = ($med->rem)-$days*($med->dose);
                 if($doses_remaining<0){
                     $doses_remaining = 0;
@@ -111,9 +116,27 @@ class MedsController extends Controller
   
             $med = Meds::find($id);
             $refill = $request->get('refill');
-            $rem    = $med->rem;
+            $rem    = $med->rem;        //number of doses remaining
+            $dose   = $med->dose;       //number of doses per day prescribed
 
-            $rem = $rem + $refill;
+            //how many days since last update:
+
+            $now = time(); // or your date as well
+            $lastUpdate = strtotime($med->updated_at);
+            $datediff = $now - $lastUpdate;
+            $days = floor($datediff /(60 * 60 * 24));
+
+            //$days is the number of days since last refill
+
+            //how many doses remain since last refill:
+
+            $doses_remaining = ($rem)-$days*($dose);
+            if($doses_remaining<0){
+                $doses_remaining = 0;
+            }
+
+            //add refill to remaining amount and update db
+            $rem = $doses_remaining + $refill;
             $med->rem = $rem;
             
             $med->save();
