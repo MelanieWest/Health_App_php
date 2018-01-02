@@ -5,6 +5,8 @@ https://evening-dusk-65255.herokuapp.com/
 ```This is an app designed for mobile applications using a LAMP stack:
 Laravel-artisan-mySQL-PHP
 
+locally, run with the command: php artisan serve (runs on port 8000)
+
 The purpose is to simplify the process of managing a long-term illness by keeping critical information in one place.```
 
 Currently, the app can help with:
