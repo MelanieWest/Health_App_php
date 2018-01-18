@@ -28,7 +28,9 @@ class DatabaseSeeder extends Seeder
                 DB::table('meds')->insert([ //,
                     'id' => $faker ->id,
                     'name' => $faker->name,
-                    'created_at'=>$faker->date 
+                    'created_at'=>$faker->date,
+                    'dose'=>$faker->integer,
+                    'rem'=>$faker->integer
                 ]);
             }
 
