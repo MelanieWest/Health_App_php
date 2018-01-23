@@ -46,7 +46,7 @@
                     <tbody>
 
                     @foreach ($meds as $med)
-                    <tr style="width: 500px;">
+                    <tr style="width: 540px;">
                         <td>
                         
                         <form method = "POST" action ="/meds/{{$med->id}}/">
@@ -69,10 +69,10 @@
 
                                 <div class="row">
                                     <div class="col-sm-1">
-                                        <h3 style="padding-left: 30px;">{{$med->rem}}</h3>
+                                        <h3 style="padding-left: 20px;">{{$med->rem}}</h3>
                                     </div>
                                     <div class="col-sm-1">
-                                        <h3><input type="number" style="width: 70px;" placeholder="refill"  name="refill"></h3>
+                                        <h3><input type="number" style="width: 68px;" placeholder="refill"  name="refill"></h3>
                                     </div>
                                     <div class="col-sm-1">
                                         <button type="submit" style="margin-top:25px">Add doses</button>
