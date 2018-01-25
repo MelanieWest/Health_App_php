@@ -39,8 +39,15 @@ return [
             'prefix' => '',
         ],
 
-        //DB_HOST=127.0.0.1   this was removed from '.env'
-        //DB_USERNAME=root
+        //can't get this running through heroku.  remote access is through amazon RDS.
+        //there are more things to modify, but I don't know how to do it.  I will keep this as
+        //a successful local deployment and work on other things.
+        // the failure traces to pubic/index.php line 55.
+
+        //below are the amazon credentials (I don't know the password)
+        //these are set in the .env file
+        //DB_HOST=v02yrnuhptcod7dk.cbetxkdyhwsb.us-east-1.rds.amazonaws.com
+        //DB_USERNAME=y98mxhkihi3vvaed
         
         'mysql' => [
             'driver' => 'mysql',
