@@ -40,6 +40,8 @@ return [
         ],
 
         //DB_HOST=127.0.0.1   this was removed from '.env'
+        //DB_USERNAME=root
+        
         'mysql' => [
             'driver' => 'mysql',
             'host' => env('DB_HOST', '127.0.0.1'),
