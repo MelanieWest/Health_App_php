@@ -20,9 +20,11 @@
 
   <div>
       <ul class="list-group list-group-flush">
+      @foreach ($contacts as $contact)
         <li class="list-group-item text-center"><h3>{{$contact->friend}}</h3></li>
         <li class="list-group-item text-center"><h3>{{$contact->doc}}</h3></li>
         <li class="list-group-item text-center"><h3>{{$contact->pharm}}</h3></li>
+      @endforeach
       </ul>
   </div>
 
