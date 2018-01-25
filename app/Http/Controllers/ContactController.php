@@ -21,10 +21,10 @@ class ContactController extends Controller
     {
         $auth_user = Auth::user()->id;
         
-  //      $contact = DB::table('contacts')->where('user_id',$auth_user)->get();
+       $contact = DB::table('contacts')->where('user_id',$auth_user)->get();
         
-//        return view('layouts.contacts',compact('contact'));
-        return view('layouts.contacts');
+       return view('layouts.contacts',compact('contact'));
+     //   return view('layouts.contacts');
     }
 
     /**

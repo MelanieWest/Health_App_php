@@ -20,9 +20,9 @@
 
   <div>
       <ul class="list-group list-group-flush">
-        <li class="list-group-item text-center"><h3>Friend:   (407)-340-6899</h3></li>
-        <li class="list-group-item text-center"><h3>Doctor:   (407)-221-9696</h3></li>
-        <li class="list-group-item text-center"><h3>Pharmacy: (321)-851-3214</h3></li>
+        <li class="list-group-item text-center"><h3>{{$contact->friend}}</h3></li>
+        <li class="list-group-item text-center"><h3>{{$contact->doc}}</h3></li>
+        <li class="list-group-item text-center"><h3>{{$contact->pharm}}</h3></li>
       </ul>
   </div>
 
