@@ -19,12 +19,15 @@ class ContactController extends Controller
      */
     public function index()
     {
+        //for some reason this worked better when I treated $contacts as if multiple
+        //records were received, though there is only one per user.  I display using
+        // @foreach and they work.  Is it the 'compact' portion of the return view?
+        
         $auth_user = Auth::user()->id;
         
         $contacts = DB::table('contacts')->where('user_id',$auth_user)->get();
         
         return view('layouts.contacts',compact('contacts'));
-     //   return view('layouts.contacts');
     }
 
     /**
