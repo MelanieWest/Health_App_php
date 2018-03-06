@@ -44,16 +44,12 @@ return [
         //a successful local deployment and work on other things.
         // the failure traces to pubic/index.php line 55.
 
-        //below are the amazon credentials (I don't know the password)
-        //these are set in the .env file
-        
-        //DB_HOST=v02yrnuhptcod7dk.cbetxkdyhwsb.us-east-1.rds.amazonaws.com
-        //DB_USERNAME=y98mxhkihi3vvaed
+
         
         'mysql' => [
             'driver' => 'mysql',
             'host' => env('DB_HOST', 'otwsl2e23jrxcqvx.cbetxkdyhwsb.us-east-1.rds.amazonaws.com'),
-            'port' => env('DB_PORT', '3306'),
+            'port' => env('DB_PORT', process.env.PORT || '3306'),
             'database' => env('DB_DATABASE', 'bfh2ij19f0qr331r'),
             'username' => env('DB_USERNAME', 'gib5ece42cggkd9d'),
             'password' => env('DB_PASSWORD', 'bropbhp396xqo3bb'),
