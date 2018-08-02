@@ -2,6 +2,8 @@
 
 https://evening-dusk-65255.herokuapp.com/
 
+(The above link works, though there are some errors that will occur.)
+
 ```This is an app designed for mobile applications using a LAMP stack:
 Laravel-artisan-mySQL-PHP
 
